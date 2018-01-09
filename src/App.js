@@ -24,13 +24,13 @@ class App extends Component {
 			artist: null,
 			accessToken: this.getAccessToken('access_token'),
 			tracks: [],
-			url: 'http://localhost:3000'
+			url: 'http://localhost:5000'
 		}
 
 	}
 	componentWillMount(){
 
-      
+      console.log('mount')
 		if(! this.state.accessToken){
 			let stateKey = 'spotify_auth_state';
             var client_id = 'e188746505cb4626942c5510e1a723be'; // Your client id
