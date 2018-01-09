@@ -24,7 +24,7 @@ class App extends Component {
 			artist: null,
 			accessToken: this.getAccessToken('access_token'),
 			tracks: [],
-			url: 'http://localhost:5000'
+			url: 'https://pacific-brushlands-52386.herokuapp.com/'
 		}
 
 	}
