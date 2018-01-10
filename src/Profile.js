@@ -18,7 +18,8 @@ class Profile extends Component {
 				 >
 				    <CardHeader
 				      title={artist.name}
-				      subtitle={`Followers: ${artist.followers.total}`}
+				      style={{textAlign: 'left'}}
+				      subtitle={`Spotify Followers: ${artist.followers.total}`}
 				      avatar={artist.images[0].url}
 				      subtitleColor={styleObj}
 				      titleColor={styleObj}
