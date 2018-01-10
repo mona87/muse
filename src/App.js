@@ -9,6 +9,7 @@ import BottomNav from './BottomNav';
 import Profile from './Profile';
 import Gallery from './Gallery';
 
+
 const searchStyle = {
 	display: 'block',
     width: 256,
@@ -29,12 +30,10 @@ class App extends Component {
 
 	}
 	componentWillMount(){
-
-      console.log('mount')
 		if(! this.state.accessToken){
 			let stateKey = 'spotify_auth_state';
-            var client_id = 'e188746505cb4626942c5510e1a723be'; // Your client id
-            var redirect_uri = `${this.state.url}/callback`; // Your redirect uri
+            var client_id = 'e188746505cb4626942c5510e1a723be';
+            var redirect_uri = `${this.state.url}/callback`; 
 
             var state = this.generateRandomString(16);
 
@@ -48,12 +47,10 @@ class App extends Component {
             url += '&scope=' + encodeURIComponent(scope);
             url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
             url += '&state=' + encodeURIComponent(state);
-            window.location = url;
-
-           let token = this.getParameterByName('access_token');
-           this.setState({accessToken : token})
+            window.location = url;         
 
         }
+
 
 	}
 	 generateRandomString(length) {
@@ -116,6 +113,7 @@ class App extends Component {
 		
 	}
 	render() {
+		         
 		return(
 			<div>
 			{this.state.accessToken ? 

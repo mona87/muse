@@ -8,4 +8,4 @@ ReactDOM.render(
 	<App />, document.querySelector('#root')
 );
 
-registerServiceWorker();
+  registerServiceWorker();
