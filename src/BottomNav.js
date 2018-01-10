@@ -25,7 +25,7 @@ class BottomNav extends Component {
             label="GitHub"
             icon={icon}
             style={{color: '#fff'}}
-            onClick={() => window.open('https://github.com/mona87/countdown-calendar')}
+            onClick={() => window.open('https://github.com/mona87/muse')}
           />
         </BottomNavigation>
       </Paper>
