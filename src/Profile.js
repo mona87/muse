@@ -19,7 +19,7 @@ class Profile extends Component {
 				    <CardHeader
 				      title={artist.name}
 				      style={{textAlign: 'left'}}
-				      subtitle={`Spotify Followers: ${artist.followers.total}`}
+				      subtitle={`Followers: ${artist.followers.total}`}
 				      avatar={artist.images[0].url}
 				      subtitleColor={styleObj}
 				      titleColor={styleObj}
@@ -37,16 +37,6 @@ class Profile extends Component {
 	}
 }
 
-/*
-			    <CardText
-				    color={styleObj}
-				    >
-				    	{artist.genres.map((genre, i) => {
-				    		genre = genre !== artist.genres[artist.genres.length - 1] ? `${genre}, ` : ` & ${genre};`
-			    		return <span key={i}>{genre}</span>
-				    	})}
-				    </CardText>
 
-				    */
 
 export default Profile;

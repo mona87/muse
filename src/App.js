@@ -8,6 +8,7 @@ import './App.css';
 import BottomNav from './BottomNav';
 import Profile from './Profile';
 import Gallery from './Gallery';
+import Refresh from './Refresh';
 
 
 const searchStyle = {
@@ -25,6 +26,7 @@ class App extends Component {
 			artist: null,
 			accessToken: this.getAccessToken('access_token'),
 			tracks: [],
+			showBtn: false,
 			url: 'https://pacific-brushlands-52386.herokuapp.com'
 		}
 
@@ -108,7 +110,8 @@ class App extends Component {
 			})
 
 		}).catch(error => {
-			 window.location = this.state.url;
+			console.log('err',error)
+			this.setState({showBtn: true})
 		});
 		
 	}
@@ -149,6 +152,7 @@ class App extends Component {
    				  style={searchStyle}
    				   />
    				  </form>
+   				  {this.state.showBtn ?  <Refresh page={this.state.url}/> : false}
    			<Profile artist={this.state.artist} />
    				  <div className="">
    				  	<Gallery tracks={this.state.tracks}/>
