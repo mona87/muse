@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "./index.html",
+    "start_url": "https://pacific-brushlands-52386.herokuapp.com/callback#access_token=BQCgku0fGiYKKV92FtbHIQIm3sHUdrC_Z8SrKxDil5jM4fZOKAtzDclXXYAbvtOm1mmFwhWySXUibKtqfltbndoqKZ0xtOCnDo-o7bMTQK5kLn7UW0T0QzutjEEdNxzBPEW3R7jRtptNONq3LjUipryDrrA&token_type=Bearer&expires_in=3600&state=LBTguEyuenX9Yzki",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
