@@ -25,7 +25,7 @@ class App extends Component {
 			artist: null,
 			accessToken: this.getAccessToken('access_token'),
 			tracks: [],
-			url: 'http://localhost:3000'
+			url: 'https://pacific-brushlands-52386.herokuapp.com'
 		}
 
 	}
@@ -50,7 +50,7 @@ class App extends Component {
             window.location = url;         
 
         }
-      
+
 
 	}
 	 generateRandomString(length) {
@@ -130,6 +130,7 @@ class App extends Component {
 			    <TextField
       				hintText="Search for an artist"
       				value={this.state.query}
+      				inputStyle={{color: '#fff'}}
       				underlineFocusStyle={{borderColor:"#212121"}}
       				onChange={e => {this.setState({query: e.target.value})}}
       				onKeyPress={ e => {

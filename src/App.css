@@ -32,6 +32,9 @@ h1{
     margin: 20px auto 50px auto;
 }
 
+.bottom-nav > div >  div{
+	color: #fff!important;
+}
 
 
 .track{
