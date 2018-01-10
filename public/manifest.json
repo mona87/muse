@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "start_url": "./index.html",
+    "start_url": "./callback#access_token=BQCp5fQYMfqLzQICVs1iWSaSvzVasKBqkuEGSRhZGm8XZpFR4I617GW69EJXcMIZw6PIlIvwKSbbMCHUGWhsO1uixTcyCXpbPpu4FijcxToPBUN9BskfRH2cG8WtQVPeQvQxbmdGvqRxhbw8-B-hWTrii9c&token_type=Bearer&expires_in=3600&state=CqmInjjTGDaqlF3C",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
