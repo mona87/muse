@@ -29,7 +29,8 @@ class App extends Component {
 			showBtn: false,
 			url: 'https://pacific-brushlands-52386.herokuapp.com'
 		}
-
+//'https://pacific-brushlands-52386.herokuapp.com'
+//'http://localhost:3000'
 	}
 	componentWillMount(){
 		if(! this.state.accessToken){
@@ -39,7 +40,7 @@ class App extends Component {
 
             var state = this.generateRandomString(16);
 
-            localStorage.setItem(stateKey, state);
+            // localStorage.setItem(stateKey, state);
             var scope = 'user-read-private user-read-email';
 
             var url = 'https://accounts.spotify.com/authorize';
@@ -48,7 +49,7 @@ class App extends Component {
             url += '&client_id=' + encodeURIComponent(client_id);
             url += '&scope=' + encodeURIComponent(scope);
             url += '&redirect_uri=' + encodeURIComponent(redirect_uri);
-            url += '&state=' + encodeURIComponent(state);
+            // url += '&state=' + encodeURIComponent(state);
             window.location = url;         
 
         }

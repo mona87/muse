@@ -46,20 +46,26 @@ class Gallery extends Component {
 	
 				{tracks.map((track ,i ) => {
 					const trackImg = track.album.images[0].url;
-					return(
-						 <Card key={i} className="track"
-						 onClick={() => this.playSound(track.preview_url)}
-						 containerStyle={{padding: 0, backgroundColor:'#212121'}}
-						 style={{ }}>
-					    <CardMedia  
-						overlayContentStyle={{paddingBottom: '8px'}}
-					    overlay={track.name} overlayStyle={{color: '#fff'}}>
+					
+						return(
+							<div key={i} className="track">
+								<div style={{marginBottom: '5px'}}>{ !track.preview_url ? 'Preview track not available.' : false}</div>
+							 <Card 
+							 onClick={() => this.playSound(track.preview_url)}
+							 containerStyle={{padding: 0, backgroundColor:'#212121'}}
+							 style={{ }}>
+							    <CardMedia  
+								overlayContentStyle={{paddingBottom: '8px'}}
+							    overlay={track.name} overlayStyle={{color: '#fff'}}>
 
-					    <img src={trackImg} alt="track-img" />
-					    </CardMedia>
-    					
-				  </Card>
-						)
+							    <img src={trackImg} alt="track-img" />
+							    </CardMedia>  					
+					  		</Card>
+					  		</div>
+				
+				 
+					)			
+				
 				})}</div>
 			)
 	}

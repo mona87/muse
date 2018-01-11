@@ -4,12 +4,9 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 
 class Refresh extends Component{
-	constructor(props){
-		super(props);
-	}
 	refreshPage(url) {
 
-		window.location = url;
+		window.location.reload(url);
 	}
 render(){
 			console.log('props',this.props)
