@@ -20,7 +20,7 @@ class Profile extends Component {
 				      title={artist.name}
 				      style={{textAlign: 'left'}}
 				      subtitle={`Followers: ${artist.followers.total}`}
-				      avatar={artist.images[0].url}
+				      avatar={artist.images[0] ? artist.images[0].url: false}
 				      subtitleColor={styleObj}
 				      titleColor={styleObj}
 				      titleStyle={{ textAlign: 'left', marginBottom: '5px', fontSize: '15px'}}
