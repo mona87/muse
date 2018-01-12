@@ -6,7 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 class Refresh extends Component{
 	refreshPage(url) {
 
-		window.location.reload(url);
+		window.location = `${url}/callback`;
 	}
 render(){
 			console.log('props',this.props)
