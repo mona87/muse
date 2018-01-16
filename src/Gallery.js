@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import {Card, CardMedia } from 'material-ui/Card';
 
+
 class Gallery extends Component {
 	constructor(props){
 		super(props);
@@ -66,7 +67,9 @@ class Gallery extends Component {
 				 
 					)			
 				
-				})}</div>
+				})}
+	
+				</div>
 			)
 	}
 }
