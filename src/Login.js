@@ -9,7 +9,7 @@ class Login extends Component{
 	constructor(){
 		super();
 		this.state = {
-			base_url: 'http://localhost:3000',
+			base_url: 'https://pacific-brushlands-52386.herokuapp.com',
 			url: ''
 		}
 		//'https://pacific-brushlands-52386.herokuapp.com'
