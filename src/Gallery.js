@@ -1,34 +1,33 @@
-import React, {Component} from 'react';
-import './App.css';
-import {Card, CardMedia } from 'material-ui/Card';
-
+import React, { Component } from "react";
+import "./App.css";
+import { Card, CardMedia } from "material-ui/Card";
 
 class Gallery extends Component {
-	constructor(props){
+	constructor(props) {
 		super(props);
 		this.state = {
-			playingUrl: '',
+			playingUrl: "",
 			audio: null,
 			playing: false
-		}
+		};
 	}
 
-	playSound(preview){
+	playSound(preview) {
 		let audio = new Audio(preview);
-		if(!this.state.playing){
+		if (!this.state.playing) {
 			audio.play();
 			this.setState({
 				playing: true,
 				playingUrl: preview,
 				audio
 			});
-		}else{
-			if(this.state.playingUrl === preview){
+		} else {
+			if (this.state.playingUrl === preview) {
 				this.state.audio.pause();
 				this.setState({
 					playing: false
 				});
-			} else{
+			} else {
 				this.state.audio.pause();
 				audio.play();
 				this.setState({
@@ -39,38 +38,45 @@ class Gallery extends Component {
 			}
 		}
 	}
-	render(){
-		const {tracks} = this.props;
-		return(
-
-				<div className="gallery">
-	
-				{tracks.map((track ,i ) => {
+	render() {
+		const { tracks } = this.props;
+		return (
+			<div className="gallery">
+				{tracks.map((track, i) => {
 					const trackImg = track.album.images[0].url;
-					
-						return(
-							<div key={i} className="track">
-								<div style={{marginBottom: '5px'}}>{ !track.preview_url ? 'Preview track not available.' : false}</div>
-							 <Card 
-							 onClick={() => this.playSound(track.preview_url)}
-							 containerStyle={{padding: 0, backgroundColor:'#212121'}}
-							 style={{ }}>
-							    <CardMedia  
-								overlayContentStyle={{paddingBottom: '8px'}}
-							    overlay={track.name} overlayStyle={{color: '#fff'}}>
 
-							    <img src={trackImg} alt="track-img" />
-							    </CardMedia>  					
-					  		</Card>
-					  		</div>
-				
-				 
-					)			
-				
+					return (
+						<div key={i} className="track">
+							<div style={{ marginBottom: "5px" }}>
+								{!track.preview_url
+									? "Preview track not available."
+									: false}
+							</div>
+							<Card
+								onClick={() =>
+									this.playSound(track.preview_url)
+								}
+								containerStyle={{
+									padding: 0,
+									backgroundColor: "#212121"
+								}}
+								style={{}}
+							>
+								<CardMedia
+									overlayContentStyle={{
+										paddingBottom: "8px"
+									}}
+									overlay={track.name}
+									overlayStyle={{ color: "#fff" }}
+								>
+									<img src={trackImg} alt="track-img" />
+								</CardMedia>
+							</Card>
+						</div>
+					);
 				})}
-	
-				</div>
-			)
+			</div>
+		);
 	}
 }
 
